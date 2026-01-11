@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Lendsqr Frontend Engineering Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Project Overview
+This repository contains a high-fidelity implementation of the Lendsqr Admin Console, built to meet the requirements of the Frontend Engineering assessment. The application manages over 500 user records, featuring secure authentication, advanced filtering, and a mobile-responsive dashboard.
 
-Currently, two official plugins are available:
+## 🚀 Live Application
+**URL:** [https://toluwanimi-eniolorunda-lendsqr-fe-test.vercel.app](https://toluwanimi-eniolorunda-lendsqr-fe-test.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Key Features
+* **Authentication**: Secure login page with validation and protected route management.
+* **User Management**: Dynamic dashboard with four summary cards and a comprehensive user table.
+* **Data Handling**: Fetches and manages a mock API dataset of 500 records.
+* **Advanced Filtering**: Multi-parameter filter system for user data (Organization, Status, Date, etc.).
+* **User Details**: Deep-dive profile view with data persistence via LocalStorage.
+* **Responsive Design**: Pixel-perfect implementation across mobile, tablet, and desktop views.
+* **Real-time Feedback**: Integrated `react-toastify` for system notifications and error handling.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technical Stack
+* **Framework**: React (Vite)
+* **Language**: TypeScript (Compulsory for robust type safety)
+* **Styling**: SCSS (Utilizing variables, mixins, and BEM naming convention)
+* **Routing**: React Router Dom v6
+* **Notifications**: React-Toastify
+* **Testing**: Jest & React Testing Library (Unit testing for positive and negative scenarios)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Local Setup & Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Clone the repository**:
+   ```bash
+   git clone [https://git@github.com:Tychicus-solo/tolu-eniolorunda-lendsqr-fe-test.git](https://git@github.com:Tychicus-solo/tolu-eniolorunda-lendsqr-fe-test.git)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Install dependencies:  npm install
+Run the development server:  npm run dev
+Execute Unit Tests:  npm test
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📐 Design Philosophy
+Visual Fidelity: Prioritized "pixel-perfect" representation of the Figma design, ensuring sacrosanct quality in spacing, typography, and color accuracy.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Code Quality: Structured the project using a feature-based architecture for better maintainability and scalability.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Performance: Optimized the filtering logic to ensure zero lag when interacting with the 500-record dataset.
+
+👨‍💻 Candidate
+Name: Toluwanimi Eniolorunda
+
+Submission Date: January 11, 2026
+
+
+-
