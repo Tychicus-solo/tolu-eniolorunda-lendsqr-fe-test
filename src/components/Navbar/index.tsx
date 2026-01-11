@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useDebounce } from "../../hooks/useDebounce"; 
 import "./Navbar.scss";
 import { Notifications, ChevronDown, Logo } from "../../assets/icons";
-import Avatar from "../../assets/avatar.png";
+import Avatar from "../../assets/Avatar.png";
 import Search from "../../assets/icons/search.svg";
 
 interface NavbarProps {
