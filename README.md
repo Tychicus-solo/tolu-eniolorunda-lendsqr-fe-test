@@ -33,7 +33,7 @@ This repository contains a high-fidelity implementation of the Lendsqr Admin Con
 
 1. **Clone the repository**:
    ```bash
-   git clone [https://git@github.com:Tychicus-solo/tolu-eniolorunda-lendsqr-fe-test.git](https://git@github.com:Tychicus-solo/tolu-eniolorunda-lendsqr-fe-test.git)
+   git clone https://git@github.com:Tychicus-solo/tolu-eniolorunda-lendsqr-fe-test.git
 
 Install dependencies:  npm install
 Run the development server:  npm run dev
@@ -50,6 +50,3 @@ Performance: Optimized the filtering logic to ensure zero lag when interacting w
 Name: Toluwanimi Eniolorunda
 
 Submission Date: January 11, 2026
-
-
--
