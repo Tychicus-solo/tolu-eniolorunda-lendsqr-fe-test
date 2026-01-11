@@ -1,0 +1,64 @@
+@use "../../../../styles/variables" as v;
+
+.filter-modal {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background: v.$white;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 30px 20px;
+  width: 270px;
+  z-index: 10;
+
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: 500;
+      font-size: 14px;
+      color: v.$grey-primary;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      border: 1px solid #213f7d26;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 14px;
+      color: v.$secondary-color;
+      outline: none;
+
+      &::placeholder { opacity: 0.5; }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    button {
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn-reset {
+      background: v.$white;
+      border: 1px solid v.$grey-primary;
+      color: v.$grey-primary;
+    }
+
+    .btn-filter {
+      background: v.$primary-color;
+      border: none;
+      color: v.$white;
+    }
+  }
+}

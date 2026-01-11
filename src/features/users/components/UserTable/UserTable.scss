@@ -1,0 +1,85 @@
+@use "../../../../styles/variables" as v;
+
+.user-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  th {
+    padding: 20px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: v.$grey-primary;
+  }
+
+  &__header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__filter-icon {
+    cursor: pointer;
+    width: 14px;
+  }
+
+  td {
+    padding: 20px 15px;
+    font-size: 14px;
+    color: v.$grey-primary;
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+    white-space: nowrap;
+  }
+
+  &__actions {
+    position: relative;
+  }
+
+  &__more-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  &__dropdown {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    background: v.$white;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(84, 95, 125, 0.04);
+    border-radius: 4px;
+    z-index: 10;
+    width: 180px;
+    padding: 10px 0;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 12px 20px;
+      border: none;
+      background: none;
+      color: v.$grey-primary;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: rgba(v.$primary-color, 0.05);
+      }
+
+      img {
+        width: 16px;
+      }
+    }
+  }
+}

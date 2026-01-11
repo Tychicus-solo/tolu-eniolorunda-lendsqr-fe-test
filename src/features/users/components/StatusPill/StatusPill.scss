@@ -1,0 +1,30 @@
+@use "../../../../styles/variables" as v;
+
+.status-pill {
+  padding: 7px 18px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+
+  &--inactive {
+    background-color: rgba(84, 95, 125, 0.1);
+    color: v.$grey-primary;
+  }
+
+  &--pending {
+    background-color: rgba(233, 178, 0, 0.1); 
+    color: v.$warning-color;
+  }
+
+  &--blacklisted {
+    background-color: rgba(228, 3, 59, 0.1);
+    color: v.$danger-color;
+  }
+
+  &--active {
+    background-color: rgba(57, 205, 204, 0.1);
+    color: v.$primary-color;
+  }
+}

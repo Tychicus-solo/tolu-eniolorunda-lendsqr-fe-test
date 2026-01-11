@@ -1,0 +1,167 @@
+@use "../../styles/variables" as v;
+
+.navbar {
+  height: 100px;
+  background-color: v.$white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px; 
+  box-shadow: 3px 0px 20px 0px #0000000A;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 20px;
+
+    .bar {
+      height: 2px;
+      width: 100%;
+      background-color: v.$secondary-color; 
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 1024px) {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 145px;
+    }
+
+    @media (max-width: 480px) {
+      img {
+        width: 120px;
+      }
+    }
+  }
+
+  &__search {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 100px;
+
+    &-group {
+      display: flex;
+      width: 100%;
+    }
+
+    &-input {
+      flex: 1;
+      height: 40px;
+      padding: 0 20px;
+      border: 1px solid rgba(v.$secondary-color, 0.15);
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 14px;
+      color: rgba(v.$grey-primary, 0.7);
+
+      &::placeholder {
+        color: rgba(v.$grey-primary, 0.5);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-button {
+      width: 56px;
+      height: 40px;
+      background-color: v.$primary-color; 
+      border: none;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      display: none; 
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+  }
+
+  &__docs {
+    color: v.$secondary-color;
+    text-decoration: underline;
+    font-size: 16px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  &__notif {
+    width: 20px;
+    cursor: pointer;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @media (max-width: 480px) {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &__username {
+    font-weight: 500;
+    font-size: 16px;
+    color: v.$secondary-color;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__chevron {
+    width: 10px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 20px;
+    height: 80px; 
+  }
+}

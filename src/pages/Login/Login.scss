@@ -1,0 +1,110 @@
+@use "../../styles/variables" as v;
+
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+
+  .login-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: v.$secondary-color;
+    margin-bottom: 10px;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .login-subtitle {
+    font-size: 20px;
+    color: v.$grey-primary;
+    margin-bottom: 60px;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .login-form {
+    .form-group {
+      margin-bottom: 25px;
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid rgba(84, 95, 125, 0.15);
+        border-radius: 5px;
+        font-size: 14px;
+        color: v.$grey-primary;
+        outline: none;
+        font-family: 'Work Sans', sans-serif;
+        transition: border-color 0.3s ease;
+
+        &::placeholder { 
+          color: rgba(84, 95, 125, 0.6); 
+        }
+
+        &:focus {
+          border-color: v.$primary-color;
+        }
+      }
+    }
+
+    .password-group {
+      position: relative;
+      
+      .password-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: v.$primary-color;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    }
+
+    .forgot-password {
+      display: block;
+      color: v.$primary-color;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      width: fit-content;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: v.$primary-color;
+      color: v.$white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 0.1em;
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        background-color: lighten(v.$primary-color, 10%);
+      }
+
+      &:hover:not(:disabled) { 
+        background: darken(v.$primary-color, 5%); 
+      }
+    }
+  }
+}

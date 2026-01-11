@@ -1,0 +1,28 @@
+@use "../../styles/variables" as v;
+
+.users-dashboard {
+  padding: 20px 0;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: v.$secondary-color;
+    margin-bottom: 40px;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+    margin-bottom: 40px;
+  }
+
+  &__table-container {
+    background: v.$white;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 30px;
+    overflow-x: auto;
+  }
+}

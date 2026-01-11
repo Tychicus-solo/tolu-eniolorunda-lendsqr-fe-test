@@ -1,0 +1,130 @@
+@use "../../../../styles/variables" as v;
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  color: v.$grey-primary;
+  font-family: 'Work Sans', sans-serif;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+
+    span {
+      opacity: 0.6;
+    }
+  }
+
+  &__select-wrapper {
+    position: relative;
+    background: rgba(33, 63, 125, 0.1); 
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    width: 80px;
+    height: 30px;
+  }
+
+  &__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: v.$secondary-color;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    z-index: 1;
+    padding-right: 15px;
+  }
+
+  &__select-icon {
+    position: absolute;
+    right: 12px;
+    width: 10px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 480px) {
+      gap: 10px;
+      scale: 0.9;
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__num {
+    background: transparent;
+    border: none;
+    color: rgba(84, 95, 125, 0.6);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+
+    &.active {
+      color: v.$grey-primary;
+      font-weight: 600;
+      background: rgba(84, 95, 125, 0.05);
+    }
+
+    &.dots {
+      cursor: default;
+    }
+
+    &:hover:not(:disabled):not(.dots) {
+      background: rgba(33, 63, 125, 0.05);
+    }
+  }
+
+  &__nav-btn {
+    background: rgba(33, 63, 125, 0.1);
+    border-radius: 4px;
+    border: none;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover:not(:disabled) {
+      background: rgba(33, 63, 125, 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+
+   
+  }
+}
