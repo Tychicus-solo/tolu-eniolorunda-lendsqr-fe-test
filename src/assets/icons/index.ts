@@ -15,7 +15,7 @@ export {default as DecisionModels} from './decision-models.svg'
 export {default as FeesAndPricing} from './fees-and-pricing.svg'
 export {default as FeesAndCharges} from "./fees-and-charges.svg"
 export {default as Logo} from './logo.svg'
-export {default as UserStats} from './UserStats.svg'
+export {default as UserStats} from './userStats.svg'
 export {default as UsersWithLoans} from './users-with-loans.svg'
 export {default as UsersWithSavings} from './users-with-savings.svg'
 export {default as ActiveUsersStats} from './active-users-stats.svg'
